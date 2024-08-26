@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עיצוב חופשי - דף הבית</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="sewing-machine-history">
+            <img src="images/sewing-machine-1.jpg" alt="מכונת תפירה עתיקה">
+            <img src="images/sewing-machine-2.jpg" alt="מכונת תפירה מהמאה ה-19">
+            <img src="images/sewing-machine-3.jpg" alt="מכונת תפירה מתחילת המאה ה-20">
+            <img src="images/sewing-machine-4.jpg" alt="מכונת תפירה מודרנית">
+            <img src="images/sewing-machine-5.jpg" alt="מכונת תפירה דיגיטלית">
+        </div>
+    </div>
+    <div class="content-container">
+        <header class="banner">
+            <h1 class="main-title">עיצוב חופשי</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">ראשי</a></li>
+                    <li><a href="#courses">קורסים</a></li>
+                    <li><a href="#about">אודות</a></li>
+                    <li><a href="#contact">צור קשר</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero">
+                <h1>ברוכה הבאה לעיצוב חופשי</h1>
+                <p>גלי את עולם העיצוב והאופנה עם הקורסים המתקדמים שלנו</p>
+                <button class="cta-button" onclick="showSewingMachine()">התחילי ללמוד עכשיו</button>
+            </section>
+
+            <div id="sewing-machine" style="display: none;">
+              <svg width="100" height="100" viewBox="0 0 100 100">
+                <!-- גוף המכונה -->
+                <path d="M10,60 Q10,40 30,40 L70,40 Q90,40 90,60 L90,90 L10,90 Z" fill="#4a4a4a"/>
+                <!-- חלק עליון -->
+                <path d="M30,40 Q30,20 50,20 Q70,20 70,40 Z" fill="#6a6a6a"/>
+                <!-- גלגל תפירה -->
+                <circle cx="75" cy="35" r="10" fill="#8a8a8a" stroke="#4a4a4a" stroke-width="2">
+                  <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 75 35" to="360 75 35" dur="1s" repeatCount="indefinite" />
+                </circle>
+                <!-- מחט -->
+                <line x1="50" y1="40" x2="50" y2="80" stroke="#2a2a2a" stroke-width="2">
+                  <animate attributeName="y2" values="80;85;80" dur="0.5s" repeatCount="indefinite" />
+                </line>
+                <!-- רגלית -->
+                <path d="M45,75 L55,75 L55,80 L45,80 Z" fill="#2a2a2a">
+                  <animate attributeName="d" values="M45,75 L55,75 L55,80 L45,80 Z;M45,80 L55,80 L55,85 L45,85 Z;M45,75 L55,75 L55,80 L45,80 Z" dur="0.5s" repeatCount="indefinite" />
+                </path>
+                <!-- בסיס -->
+                <rect x="5" y="90" width="90" height="10" fill="#8a8a8a"/>
+              </svg>
+            </div>
+
+            <div id="ai-assistant" class="ai-assistant">
+                <div class="ai-header">
+                    <h3>עוזר העיצוב החכם</h3>
+                    <button id="minimize-ai" class="minimize-button">-</button>
+                </div>
+                <div class="ai-content">
+                    <div class="chat-messages" id="chat-messages"></div>
+                    <input type="text" id="user-input" placeholder="שאלי את העוזר החכם...">
+                    <button id="send-message">שלח</button>
+                </div>
+            </div>
+
+            <section id="gallery">
+                <h2>הקורסים שלנו</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/course1.jpg" alt="קורס עיצוב בסיסי">
+                        <h3>קורס עיצוב בסיסי</h3>
+                        <p>למדי את יסודות העיצוב</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/course2.jpg" alt="עיצוב מתקדם">
+                        <h3>עיצוב מתקדם</h3>
+                        <p>הרחיבי את הידע שלך</p>
+                    </div>
+                    <!-- הוסיפי עוד פריטים לפי הצורך -->
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>צרו קשר</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="שם מלא" required>
+                    <input type="email" name="email" placeholder="כתובת אימייל" required>
+                    <textarea name="message" placeholder="הודעה" required></textarea>
+                    <button type="submit">שלח</button>
+                </form>
+                <div class="contact-info">
+                    <p>טלפון: 054-1234567</p>
+                    <p>אימייל: info@freedesign.co.il</p>
+                    <p>כתובת: רחוב היצירה 10, תל אביב</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>כל הזכויות שמורות © 2024 עיצוב חופשי</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
